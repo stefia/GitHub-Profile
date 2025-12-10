@@ -1,4 +1,6 @@
 import styles from "./Repo.module.css";
+import nestingIcon from "../assets/Nesting.svg";
+import starIcon from "../assets/Star.svg";
 
 function Repo({ repo }) {
   if (!repo) {
@@ -33,11 +35,11 @@ function Repo({ repo }) {
       {description && <div className={styles.description}>{description}</div>}
       <div className={styles.footer}>
         <div className={styles.stat}>
-          <img src="/src/assets/Nesting.svg" />
+          <img src={nestingIcon} />
           <span className={styles.stat}>{forks_count}</span>
         </div>
         <div className={styles.stat}>
-          <img src="/src/assets/Star.svg" />
+          <img src={starIcon} />
           <span>{stargazers_count}</span>
         </div>
 
